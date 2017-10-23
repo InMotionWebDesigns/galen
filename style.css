@@ -7,7 +7,558 @@ Description: Designed specifically for use with the BoldGrid suite of plugins, a
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: boldgrid-medinfo
+Text Domain: medinfo
 Template: prime
 Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-layout, rtl-language-support, translation-ready
 */
+
+
+/*------------------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+--------------------------------------------------------------------------
+# Base Styles
+	## Background
+	## Positioning
+	## Typography
+	## Titles
+	## Links
+	## Buttons
+	## Et Cetera
+# Header
+# Navigation
+	## Main Menu
+	## Other Menus
+	## Social Menus
+# Modules
+	## Global
+	## Alpha
+	## Beta
+	## Gamma
+# Pages
+# Posts
+# Plugins
+	## WooCommerce
+# Footer
+------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------
+# Base Styles
+------------------------------------------------------------------------*/
+
+/*-----------------------------------------------
+## Background
+-----------------------------------------------*/
+.page-bg {
+	padding: 25px 0 60px;
+}
+.imhwpb-bg-1 {
+	background: url("images/subtle-pattern-bg.png") repeat;
+	padding: 75px 0 60px;
+}
+.imhwpb-bg-2 {
+	padding: 75px 0 60px;
+}
+
+/*-----------------------------------------------
+## Positioning
+-----------------------------------------------*/
+#content {
+	background: none;
+	padding-top: 25px;
+}
+
+/*-----------------------------------------------
+## Typography
+-----------------------------------------------*/
+h1,
+h2,
+h3,
+h6.alt-font,
+.slogan,
+.entry-title,
+.page-title,
+.widget-title,
+.comments-title,
+.comment-reply-title,
+.mod-alpha h4,
+.mod-gamma-2 h4,
+.entry-content ol li {
+	font-weight: bold;
+}
+.entry-content ol li p {
+	font-weight: normal;
+}
+h2,
+h3 {
+	margin: 15px 0 20px;
+}
+h6.alt-font {
+	margin-bottom: 5px;
+}
+.entry-content ol {
+	margin-left: 0;
+}
+.entry-content ol li {
+	padding-bottom: 10px;
+}
+.entry-content ul,
+.entry-content ol {
+	padding-left: 16px;
+}
+#menu-social ul li a {
+	-webkit-font-smoothing: antialiased;
+}
+.button-primary,
+.button-secondary,
+.button-primary:hover,
+.button-primary:focus,
+.open > .dropdown-toggle.btn-primary,
+.button-secondary:hover,
+.button-secondary:focus {
+	text-decoration: none;
+}
+#today a {
+	text-decoration: underline;
+}
+.entry-title {
+	text-align: left;
+}
+.secondary-menu,
+.tertiary-menu {
+	text-align: right;
+}
+
+/* Extra small devices (phones, less than 768px) */
+.xs-center,
+.mod-img,
+.mod-img-circle,
+.p-button-primary,
+.p-button-secondary,
+#colophon .boldgrid-widget,
+.call-to-action,
+.call-to-action .p-button-primary,
+#primary-navbar ul.navbar-nav,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+	text-align: center;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.xs-center,
+	.mod-img,
+	.mod-img-circle,
+	.p-button-primary,
+	.p-button-secondary,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a,
+	#colophon .boldgrid-widget {
+		text-align: left;
+	}
+}
+
+/*-----------------------------------------------
+## Titles
+-----------------------------------------------*/
+.page-template-page_home .entry-title {
+	display: none;
+}
+.hentry {
+	margin: 0 auto;
+}
+.hentry:first-child ~ .hentry {
+	margin-top: 75px;
+}
+.heading {
+	margin-bottom: 15px;
+}
+.heading h3 {
+	margin-top: 10px;
+}
+h5 i.fa {
+	padding-right: 10px;
+}
+
+/* Page Titles */
+.entry-title {
+	display: block;
+	margin: 25px 0 75px;
+	position: relative;
+	z-index: 1;	
+}
+.entry-title a {
+	padding-bottom: 8px;
+}
+
+.page-header {
+	border-bottom: none;
+}
+
+/*-----------------------------------------------
+## Links
+-----------------------------------------------*/
+a,
+.link-primary {
+	clear: both;
+}
+.current_page_item a,
+.pager li > a {
+	background: none;
+}
+
+/*-----------------------------------------------
+## Buttons
+-----------------------------------------------*/
+.button-primary,
+.button-secondary {
+	border-radius: 24px;
+	padding: 14px 24px;
+	transition: all .5s;
+}
+
+/* Positioning */
+.p-button-primary,
+.p-button-secondary,
+.gridblock .p-button-primary {
+	margin: 35px 0 25px;
+}
+.gridblock .p-button-secondary {
+	margin: 0 0 25px;
+}
+
+/* Block vs. Inline */
+.button-primary,
+.button-secondary {
+	display: block;
+	margin-top: 15px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.button-primary,
+	.button-secondary {
+		display: inline;
+		margin-top: 0;
+	}
+	.gridblock .p-button-secondary {
+		margin: 35px 0 25px;
+	}
+}
+
+/*-----------------------------------------------
+## Et Cetera
+-----------------------------------------------*/
+hr {
+	border: 0;
+	height: 2px;
+	margin-bottom: 30px;
+}
+.calendar_wrap .table-striped > tbody > tr:nth-of-type(2n+1) {
+	background: transparent;
+}
+input,
+select,
+#footer-widget-area ul li,
+#header-widget-area ul li,
+#secondary .table-striped > tbody > tr #today a,
+#secondary .table-striped > tbody > tr:nth-child(2n+1) td {
+	color: #333;
+}
+
+/*------------------------------------------------------------------------
+# Header
+------------------------------------------------------------------------*/
+.site-header {
+	left: 0;
+	position: static;
+	top: 25;
+	width: 100%;
+	z-index: 999;
+}
+.smaller,
+.site-title a,
+.site-header {
+	transition: all .5s;
+}
+.call-to-action {
+	margin: 0 auto;
+	padding-top: 50px;
+	width: 100%;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.site-header {
+		position: fixed;
+	}	
+	.call-to-action {
+		padding-bottom: 50px;
+		padding-top: 120px;
+		width: 60%;
+	}
+}
+
+/*------------------------------------------------------------------------
+# Navigation
+------------------------------------------------------------------------*/
+
+/*-----------------------------------------------
+## Main Menu
+-----------------------------------------------*/
+.navbar {
+	margin-bottom: 0;
+}
+#primary-navbar {
+	padding-right: 0;
+}
+.navbar-default {
+	background: none;
+	border: none;
+}
+.navbar-nav > li > a {
+	padding: 12px 10px;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+	background: none;
+}
+
+/* Extra small devices (phones, less than 768px) */
+#primary-navbar ul.navbar-nav {
+	width: 100%;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	#primary-navbar {
+		float: right;
+	}
+}
+
+/*-----------------------------------------------
+## Other Menus
+-----------------------------------------------*/
+.secondary-menu li a,
+.tertiary-menu li a,
+.footer-center-menu li a {
+	padding: 0 8px;
+}
+.secondary-menu li:after,
+.tertiary-menu li:after,
+.footer-center-menu li:after {
+	content: "";
+}
+
+/*-----------------------------------------------
+## Social Menus
+-----------------------------------------------*/
+#menu-social ul {
+	float: right;
+	margin-top: 1.25em;
+}
+#menu-social ul li a {
+	display: inline-block;
+	padding: 0 8px;
+}
+
+/*------------------------------------------------------------------------
+# Modules
+------------------------------------------------------------------------*/
+
+/*-----------------------------------------------
+## Global
+-----------------------------------------------*/
+blockquote p,
+.mod-blockquote p {
+	padding-left: 15px;
+}
+
+/*-----------------------------------------------
+## Alpha
+-----------------------------------------------*/
+.mod-alpha h2 {
+	margin: 0;
+	padding: 35px 0 20px;
+}
+.mod-alpha i {
+	padding-right: .5em;
+}
+
+/*-----------------------------------------------
+## Beta
+-----------------------------------------------*/
+.mod-beta-2 h2 {
+	text-align: center;
+}
+.mod-beta-2 img {
+	margin-top: 20px;
+}
+.mod-beta-1 p {
+	border-radius: 10px;
+	margin: 20px 0;
+	min-height: 175px;
+	padding: 40px 30px;
+	position: relative;
+	width: 100%;
+}
+.mod-beta-1 p:after {
+	border-style: solid;
+	border-width: 15px 15px 0;
+	bottom: -13px;
+	display: block;
+	content: "";	
+	left: 50%;
+	position: absolute;
+	width: 0;
+	z-index: 1;
+}
+.mod-beta-1 p:before {
+	border-style: solid;
+	border-width: 15px 15px 0;
+	bottom: -16px;
+	display: block;
+	content: "";	
+	left: 50%;
+	position: absolute;
+	width: 0;
+	z-index: 0;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.mod-beta-1 p:after {
+		border-style: solid;
+		border-width: 15px 0 15px 15px;
+		bottom: auto;
+		content: "";
+		display: block;
+		left: auto;
+		position: absolute;
+		right: -13px;
+		top: 19px;		
+		width: 0;
+		z-index: 1;
+	}
+	.mod-beta-1 p:before {
+		border-style: solid;
+		border-width: 17px 0 17px 17px;
+		bottom: auto;
+		content: "";
+		display: block;
+		left: auto;
+		position: absolute;
+		right: -17px;
+		top: 17px;		
+		width: 0;
+		z-index: 0;
+	}
+}
+
+/*-----------------------------------------------
+## Gamma
+-----------------------------------------------*/
+.mod-gamma-1 {
+	margin: 20px auto 0;
+	width: 100%;
+}
+.mod-gamma-2 {
+	margin: 0 auto;
+	padding: 10px 15px;
+	width: 200px; /* image is sized to 200px (W) */
+	z-index: 9999;
+}
+.mod-gamma-2 p,
+.mod-gamma-2 h2 {
+	margin: 0;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.mod-gamma-2 {
+		width: 100%;
+	}
+}
+
+/*------------------------------------------------------------------------
+# Pages
+------------------------------------------------------------------------*/
+/* Search Page */
+.search .jumbotron {
+	background: none;
+	text-align: center;
+}
+.search .site-content {
+	padding: 0;
+}
+
+/*------------------------------------------------------------------------
+# Posts
+------------------------------------------------------------------------*/
+.nav-links {
+	margin: 25px 0;
+}
+
+/* Comments */
+.comment-list li {
+	list-style: none;
+}
+.panel,
+.panel-default {
+	border: none;
+}
+.panel-footer {
+	padding: 30px;
+}
+
+/*------------------------------------------------------------------------
+# Plugins
+------------------------------------------------------------------------*/
+
+/*-----------------------------------------------
+## WooCommerce
+-----------------------------------------------*/
+.woocommerce div.product .woocommerce-tabs .panel {
+	background: none;
+}
+.woocommerce-account p.order-again .btn.button-primary {
+	padding: 15px 30px;
+}
+
+/*------------------------------------------------------------------------
+# Footer
+------------------------------------------------------------------------*/
+.site-footer {
+	padding: 1.5em 0;
+}
+#colophon #menu-social {
+	margin-top: -20px;
+}
+
+/* Disabled Footer */
+body.disabled-footer {
+	margin-bottom: 0;
+}
+.disabled-footer .content-area {
+	margin-bottom: 0;
+}
+.disabled-footer .site-footer {
+	height: auto;
+	padding: 1em;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.disabled-footer .content-area {
+		margin-bottom: 0;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	#colophon #menu-social {
+		display: table;
+		margin: 0 auto;
+	}
+}
