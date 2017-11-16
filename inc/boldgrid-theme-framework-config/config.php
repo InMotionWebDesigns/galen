@@ -36,10 +36,10 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 
 	// Assign Locations for Generic Header.
 	$boldgrid_framework_configs['template']['locations']['header'] = array(
-		'5' => array( '[menu]secondary' ),
+		'5' => array( '[menu]tertiary' ),
 		'6' => array( '[action]boldgrid_site_identity' ),
 		'7' => array( '[action]boldgrid_primary_navigation' ),
-		'8' => array( '[menu]tertiary' ),
+		'8' => array( '[menu]secondary' ),
 	);
 
 	// Assign Locations for Generic Header.
@@ -60,10 +60,10 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 		array(
 			'default' => true,
 			'format' => 'palette-primary',
-			'neutral-color' => '#0a0a05',
+			'neutral-color' => '#fff',
 			'colors' => array(
 				'#0a0a05',
-				'#f5d76e',
+				'#8a0709',
 				'#f5d76e',
 				'#202020',
 			),
