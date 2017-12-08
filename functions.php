@@ -4,4 +4,6 @@
  *
  * @package medinfo
  */
+
+add_filter( 'is_editing_boldgrid_theme', '__return_true' );
 ?>
