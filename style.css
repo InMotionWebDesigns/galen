@@ -9,7 +9,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: medinfo
 Template: prime
-Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-layout, rtl-language-support, translation-ready
+Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-layout, rtl-language-support, translation-ready,boldgrid-theme-28
 */
 
 
@@ -52,7 +52,7 @@ Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-la
 	padding: 25px 0 60px;
 }
 .imhwpb-bg-1 {
-	background: url("images/subtle-pattern-bg.png") repeat;
+	background:  none;
 	padding: 75px 0 60px;
 }
 .imhwpb-bg-2 {
