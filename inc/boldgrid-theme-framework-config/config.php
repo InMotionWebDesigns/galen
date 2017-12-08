@@ -194,31 +194,6 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	// Enable Sticky Nav in Header.
 	$boldgrid_framework_configs['scripts']['boldgrid-sticky-nav'] = true;
 
-	/**
-	 * Widgets
-	 */
-	 $widget_markup['call-to-action'] = <<<HTML
-		<div class="row call-to-action-wrapper">
-			<div class="col-md-12">
-				<div class="call-to-action">
-					<h2 class="slogan">LET US ELEVATE YOUR STANDARDS</h2>
-					<p class="p-button-primary">
-						<a class="button-primary" href="about-us">LEARN MORE</a>
-					</p>
-				</div>
-			</div>
-		</div>
-
-HTML;
-
-	// Widget 1.
-	$boldgrid_framework_configs['widget']['widget_instances']['boldgrid-widget-1'][] = array(
-		'title' => 'Call To Action',
-		'text' => $widget_markup['call-to-action'],
-		'type' => 'visual',
-		'filter' => 1,
-		'label' => 'black-studio-tinymce',
-	);
 
 	// Name Menu Locations.
 	$boldgrid_framework_configs['menu']['locations']['social'] = 'Footer Bottom Right';
