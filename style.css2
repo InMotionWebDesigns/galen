@@ -63,7 +63,7 @@ Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-la
 ## Positioning
 -----------------------------------------------*/
 #content {
-	background: none;
+	background: fff;
 	padding-top: 25px;
 }
 
@@ -266,116 +266,38 @@ select,
 /*------------------------------------------------------------------------
 # Header
 ------------------------------------------------------------------------*/
-.site-header {
-    z-index:999;
-
+.site-header {z-index:999;}
+@media only screen and (min-width: 768px) {
+    .site-header { position:fixed; background-color:#fff;width:100%;height:120px; }
 }
-.site-title {
-    padding-left:15px;
-}
-
-
 /* Mobile Media Query */
-@media only screen and (max-width: 767px) {
-.site-title { margin-top: 0px !important; padding-top: 20px !important; }
-.header-9 { background-color: #fff; }
-.header-10 { height: 0px !important; }
-.navbar-toggle { position: absolute !important; top:-32px !important; right: 0; }
-#primary-navbar { background-color: #fff !important; }
-#site-navigation {position:relative;top:-30px;}
+@media only screen and (max-width: 768px) {
+.navbar-toggle {position:relative;bottom:10px;}
+.primary-menu {position:relative;bottom:80px;}
+.site-header div div div div div {height:10px;}
+.site-title {padding-left:10px;}
 }
 
 /* Tablet Media Query */
-@media (min-width:768px) and (max-width:991px) {
-    .container {
-        width:90%
-    }
-    #masthead { 
-        position:fixed; 
-        background-color:#fff;
-        width:100%;
-        height:120px; 
-        transition:all 0.2s;    
-        -webkit-box-shadow: 0 3px 8px 2px rgba(38, 38, 38, 0.2);
-        -moz-box-shadow: 0 3px 8px 2px rgba(38, 38, 38, 0.2);
-        box-shadow: 0 3px 8px 2px rgba(38, 38, 38, 0.2);
-    }
-    #masthead .logo-site-title > img {
-        position:relative;
-        top:13px;
-        transition:all 0.2s;
-    }
-    #masthead #primary-navbar {
-        position:relative;
-
-	    transition:all 0.2s;
-    }
-    #masthead.smaller { 
-        position:fixed; 
-        background-color:#fff;
-        width:100%;
-        height:75px; 
-        transition:all 0.5s;     
-        -webkit-box-shadow: 0 3px 8px 2px rgba(38, 38, 38, 0.2);
-        -moz-box-shadow: 0 3px 8px 2px rgba(38, 38, 38, 0.2);
-        box-shadow: 0 3px 8px 2px rgba(38, 38, 38, 0.2); }
-     #masthead.smaller .logo-site-title > img {
-        position:relative;
-        top:-2px;
-        transition:all 0.5s;
-    }
-    #masthead.smaller #primary-navbar {
-        position:relative;
-		top:15px;
-	    transition:all 0.5s;
-    }
+@media only screen and (min-width: 768px) and (max-width:992) {
+.site-title {width:254px;}
+.primary-menu ul li a {
+    font-size: 14px !important;
+    position:relative;
+    bottom:20px;
 }
-
-/* Desktop Styling for shrinking navbar */
-@media only screen and (min-width: 992px) {
-    #masthead { 
-        position:fixed; 
-        background-color:#fff;
-        width:100%;
-        height:120px; 
-        transition:all 0.2s;    
-        -webkit-box-shadow: 0 3px 8px 2px rgba(38, 38, 38, 0.2);
-        -moz-box-shadow: 0 3px 8px 2px rgba(38, 38, 38, 0.2);
-        box-shadow: 0 3px 8px 2px rgba(38, 38, 38, 0.2);
-    }
-    #masthead .logo-site-title > img {
-        position:relative;
-        top:10px;
-        transition:all 0.2s;
-    }
-    #masthead #primary-navbar {
-        position:relative;
-		top:31px;
-	    transition:all 0.2s;
-    }
-    #masthead.smaller { 
-        position:fixed; 
-        background-color:#fff;
-        width:100%;
-        height:75px; 
-        transition:all 0.5s;     
-        -webkit-box-shadow: 0 3px 8px 2px rgba(38, 38, 38, 0.2);
-        -moz-box-shadow: 0 3px 8px 2px rgba(38, 38, 38, 0.2);
-        box-shadow: 0 3px 8px 2px rgba(38, 38, 38, 0.2); }
-    #masthead.smaller .logo-site-title > img {
-        position:relative;
-        top:-5px;
-        transition:all 0.5s;
-    }
-    #masthead.smaller #primary-navbar {
-        position:relative;
-		top:15px;
-	    transition:all 0.5s;
-    }
 }
-
-
-.entry-content {position:relative;top:20px;}
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.site-header {
+		position: fixed;
+	}	
+	.call-to-action {
+		padding-bottom: 50px;
+		padding-top: 120px;
+		width: 60%;
+	}
+}
 
 /*------------------------------------------------------------------------
 # Navigation
